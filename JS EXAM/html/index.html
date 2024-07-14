@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Meals</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body class="bg-black text-white">
+
+
+    <div
+        class="loading-screen position-fixed top-0 start-0 end-0 bgblack justify-content-center align-items-center d-none">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+    <!--on click bnady 3la function el get elly fyha el API ely hyft7 lma ados 3la el anchor-->
+    <div id="leftMenu" class="sidenav min-vh-100 p-4 bg-black text-white nav-tab">
+        <a href="javascript:void(0)" id="closebtn">×</a>
+        <a id="home" href="index.html">Home</a> <!--Added a Home anchor to go home easily instead of a must refresh-->
+        <a id="search" onclick="showSearchInputs()" href="#search">Search</a>
+        <a id="categories" onclick="getCategories()" href="#categories">Categories</a>
+        <a id="area" onclick="getArea()" href="#area">Area</a>
+        <a id="ingredients" onclick="getIngredients()" href="#ingredients">Ingredients</a>
+        <a id="contact" onclick="showContacts()" href="#contact">Contact Us</a>
+
+        <div class="nav-footer">
+            <div class="icons">
+                <i id="facebook-icon" class="fa-brands fa-facebook" aria-hidden="true"
+                    href="https://www.facebook.com/"></i>
+
+                <i id="x-icon" class="fa-brands fa-twitter" aria-hidden="true" href="https://www.x.com/"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-bar d-flex top-0 position-fixed min-vh-100">
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" id="logo" src="../images/images1.png" alt="a happy face logo" srcset="">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify openNav" id="open"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container w-75">
+        <div class="row py-5 g-4 d-none" id="searchPart">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/37334ba87c.js" crossorigin="anonymous"></script>
+    <script src="../JS/index.js"></script>
+
+</body>
+
+</html>
